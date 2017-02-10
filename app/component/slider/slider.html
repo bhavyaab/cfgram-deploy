@@ -1,5 +1,5 @@
 <section class="sliders">
     <div>
-      <img ng-repeat="img in sliderCtrl.heroImage track by $index" ng-hide="!sliderCtrl.isCurrentIndex($index)" ng-src="{{ img }}">
+      <img ng-repeat="img in sliderCtrl.heroImage track by $index" ng-hide="sliderCtrl.currentIndex != $index" ng-src="{{ img }}">
     </div>
 </section>
