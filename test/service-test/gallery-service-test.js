@@ -11,6 +11,7 @@ describe('Gallery Service', function() {
       this.galleryService = galleryService;
       this.$httpBackend = $httpBackend;
       this.$window.localStorage.setItem('token', 'test token');
+      this.url =  `${process.env.API_URL}/api/gallery`;
     });
   });
 
@@ -27,7 +28,7 @@ describe('Gallery Service', function() {
         Authorization: 'Bearer test token'
       };
 
-      this.$httpBackend.expectPOST('http://localhost:8000/api/gallery', galleryData, headers)
+      this.$httpBackend.expectPOST(this.url, galleryData, headers)
       .respond(200, {
         _id: '1234',
         username: 'testuser',
@@ -48,7 +49,7 @@ describe('Gallery Service', function() {
         Authorization: 'Bearer test token'
       };
 
-      this.$httpBackend.expectGET('http://localhost:8000/api/gallery', headers)
+      this.$httpBackend.expectGET(this.url, headers)
     .respond(200, this.galleryService.galleries);
 
       this.galleryService.fetchGalleries()

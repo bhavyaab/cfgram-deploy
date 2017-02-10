@@ -12,7 +12,7 @@ describe('Pic Service', function() {
     this.$httpBackend = $httpBackend;
     this.upload = Upload,
     this.$window.localStorage.setItem('token', 'test token');
-    this.url = 'http://localhost:8000/api/gallery';
+    this.url =  `${process.env.API_URL}/api/gallery`;
     this.headers = {
       'Authorization': 'Bearer test token',
       'Accept': 'application/json'

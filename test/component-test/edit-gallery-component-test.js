@@ -1,5 +1,6 @@
 'use strict';
 
+
 describe('Edit Gallery Component', function(){
   beforeEach( () => {
     angular.mock.module('cfgram');
@@ -10,7 +11,7 @@ describe('Edit Gallery Component', function(){
       this.$httpBackend = $httpBackend;
       this.galleryService = galleryService;
 
-      this.url = 'http://localhost:8000/api/gallery';
+      this.url =  `${process.env.API_URL}/api/gallery`;
       this.headers = {
         Authorization: 'Bearer test token',
         Accept: 'application/json, text/plain, */*',
