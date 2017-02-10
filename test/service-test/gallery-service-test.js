@@ -1,5 +1,8 @@
 'use strict';
 
+
+dotenv.load();
+
 describe('Gallery Service', function() {
 
   beforeEach( () => {

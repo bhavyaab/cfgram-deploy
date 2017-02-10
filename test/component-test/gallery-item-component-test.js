@@ -1,5 +1,8 @@
 'use strict';
 
+
+dotenv.load();
+
 describe('Gallery Item Component', function(){
   beforeEach( () => {
     angular.mock.module('cfgram');

@@ -1,5 +1,8 @@
 'use strict';
 
+
+dotenv.load();
+
 describe('Pic Service', function() {
 
  beforeEach( () => {

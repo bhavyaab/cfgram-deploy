@@ -1,5 +1,7 @@
 'use strict';
 
+dotenv.load();
+
 describe('Auth Service', function(){
 
   beforeEach(() => {
